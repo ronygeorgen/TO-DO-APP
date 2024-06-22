@@ -1,0 +1,303 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(100deg, #eee3e3, #080707);
+    overflow: hidden;
+}
+
+.content-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+  
+  .bubble {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 25px rgba (255, 255, 255, 0.25);
+    animation: animate_4010 8s ease-in-out infinite;
+  }
+
+  .bubble:nth-child(1) {
+    top: 20%;
+    left: 20%;
+  }
+  
+.bubble:nth-child(2) {
+  top: 60%;
+  left: 50%;
+  transform: scale(0.5);
+  animation-delay: -4s;
+}
+  
+.bubble:nth-child(3) {
+    top: 40%;
+    right: 25%;
+    transform: scale(0.7);
+    animation-delay: -6s;
+  }
+  
+  .bubble:nth-child(4) {
+    bottom: 10%;
+    left: 30%;
+    transform: scale(0.4);
+    animation-delay: -3s;
+  }
+
+ .bubble:nth-child(5) {
+  top: 10%;
+  right: 30%;
+  transform: scale(0.6);
+  animation-delay: -5s;
+}
+  
+@keyframes animate_4010 {
+    0%, 100% {
+      transform: translateY(-20px) scale(1);
+    }
+    50% {
+      transform: translateY(20px) scale(1.1);
+    }
+  }
+  
+  .bubble::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 45px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 10;
+    filter: blur(2px);
+  }
+  
+  .bubble::after {
+    content: '';
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 10;
+    filter: blur(2px);
+  }
+  
+  .bubble span {
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .bubble span:nth-child(1) {
+    inset: 10px;
+    border-left: 15px solid #0fb4ff;
+    filter: blur(8px);
+  }
+  
+  .bubble span:nth-child(2) {
+    inset: 10px;
+    border-right: 15px solid #ff4484;
+    filter: blur(8px);
+  }
+  
+  .bubble span:nth-child(3) {
+    inset: 10px;
+    border-top: 15px solid #ffeb3b;
+    filter: blur(8px);
+  }
+  
+  .bubble span:nth-child(4) {
+    inset: 30px;
+    border-left: 15px solid #ff4484;
+    filter: blur(12px);
+  }
+  
+  .bubble span:nth-child(5) {
+    inset: 10px;
+    border-bottom: 10px solid #fff;
+    filter: blur(8px);
+    transform: rotate(330deg);
+  }
+
+  
+.to-do-list{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+h1{
+    font-size: 4rem;
+    color: rgba(30, 16, 31, 0.895);
+}
+button {
+    padding: 5px 10px;
+    margin: 3px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    text-align: center;
+   }
+   
+   button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   button:hover {
+    color: #e8e8e8;
+   }
+   
+   button:hover::before {
+    width: 100%;
+   }
+.delete{
+    background-color: hsl(10,90%,50%)
+}
+.delete:hover{
+    background-color: hsl(10,90%,44%)
+}
+.move{
+    background-color: hsl(207, 90%, 64%)
+}
+.move:hover{
+    background-color: hsl(207, 90%, 54%)
+}
+
+ol{
+    padding: 0;
+}
+li{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 15px;
+    background-color: hsl(0, 0%, 97%);
+    margin-bottom: 10px;
+    border: 3px solid hsla(0, 0%, 85%, 0.75);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.text{
+    flex: 1;
+    
+}
+.delete-button, .move-button{
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    margin-left: 10px;
+}
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%; /* Set the width of the input group to 50% */
+    display: flex;
+
+}
+
+.input {
+    width: 100%; /* This will make the input take up 100% of its parent (.input-group) */
+    border: solid 1.5px #9e9e9e;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #000000;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.user-label {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: #000000;
+    pointer-events: none;
+    transform: translateY(0);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.input:focus, .input:not(:placeholder-shown) {
+    outline: none;
+    border: 1.5px solid #1a73e8;
+}
+
+.input:focus ~ .user-label, .input:not(:placeholder-shown) ~ .user-label {
+    transform: translateY(-130%) scale(0.8);
+    background-color: #212121;
+    padding: 0 .2em;
+    color: #2196f3;
+}
+
+.edit-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.edit-input {
+    flex: 1;
+    font-size: 1rem;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.icon-button.edit {
+    color: #ffd700;
+}
+
+.icon-button.save {
+    color: #4CAF50;
+}
+
+.icon-button.cancel {
+    color: #f44336;
+}
